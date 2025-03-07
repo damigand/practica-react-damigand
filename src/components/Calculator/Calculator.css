@@ -1,0 +1,53 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 20px;
+}
+
+/*Cosas para quitar las flechas de los input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    appearance: inherit;
+}
+
+input {
+    height: 30px;
+    font-size: 20px;
+    max-width: 50px;
+    margin: auto;
+    text-align: center;
+}
+
+.actions button {
+    transition: all 0.2s ease;
+    width: 30px;
+    aspect-ratio: 1;
+    border: 1px solid coral;
+    cursor: pointer;
+    color: coral;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.actions button:hover {
+    background-color: coral;
+    color: white;
+}
+
+.result-history ul {
+    list-style-type: none;
+}
